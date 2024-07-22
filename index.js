@@ -6,10 +6,10 @@ console.log(list.head());
 console.log(list.tail());
 
 list.append('Tifa');
-console.log(list);
+console.log(list.toString());
 
 list.append('Barret');
-console.log(list);
+console.log(list.toString());
 console.log(list.size());
 console.log(list.head());
 console.log(list.tail());
@@ -19,7 +19,7 @@ console.log(list.at(1));
 console.log(list.at(2));
 
 list.prepend('Cloud');
-console.log(list);
+console.log(list.toString());
 console.log(list.size());
 console.log(list.head());
 console.log(list.tail());
@@ -27,7 +27,7 @@ console.log(list.tail());
 console.log(list.contains("Barret"));
 list.pop();
 console.log(list.contains("Barret"));
-console.log(list);
+console.log(list.toString());
 
 console.log(list.contains("Cloud"));
 console.log(list.contains("Tifa"));

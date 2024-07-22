@@ -120,4 +120,19 @@ export default class LinkedList {
         }
         return null;
     }
+
+    // represent LinkedList object as strings
+    toString() {
+        let current = this.headNode;
+        let result = "";
+
+        // transverse through each node until it reaches the end of the list
+        // append the current node value to the result string
+        while (current != null) {
+            result += `( ${current.value} ) -> `;
+            current = current.nextNode;
+        }
+        result += "null";
+        return result;
+    }
 }
