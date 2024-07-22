@@ -41,4 +41,9 @@ export default class LinkedList {
         }
         return count;
     }
+
+    // return the first node in the list
+    head() {
+        return this.headNode;
+    }
 }
