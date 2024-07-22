@@ -31,3 +31,5 @@ console.log(list);
 
 console.log(list.contains("Cloud"));
 console.log(list.contains("Tifa"));
+console.log(list.find("Tifa"));
+console.log(list.find("Barret"));

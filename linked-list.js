@@ -105,4 +105,19 @@ export default class LinkedList {
         }
         return false;
     }
+
+    // return the index of the node containing value, or null if not found
+    find(value) {
+        let current = this.headNode;
+        let index = 0;
+
+        // transverse through each node until it reaches the end of the list
+        // if it finds the value, return the index
+        while (current !== null) {
+            if (current.value === value) return index;
+            current = current.nextNode;
+            index++
+        }
+        return null;
+    }
 }
