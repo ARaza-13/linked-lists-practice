@@ -58,4 +58,21 @@ export default class LinkedList {
         }
         return current;
     }
+
+    // returns the node at the given index
+    at(index) {
+        let current = this.headNode;
+        let count = 0;
+
+        // transverse through each node until it reaches the node at the given index
+        // or until it reaches the end of the list (null)
+        while (current !== null && count < index) {
+            current = current.nextNode;
+            count++;
+        }
+
+        // if index was out of bounds, return null
+        // else return the node
+        return current !== null ? current : "There is no item at this index";
+    }
 }
