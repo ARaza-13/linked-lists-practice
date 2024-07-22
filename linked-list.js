@@ -46,4 +46,16 @@ export default class LinkedList {
     head() {
         return this.headNode;
     }
+
+    // return the last node in the list
+    tail() {
+        let current = this.headNode;
+        if (current === null) return null; // if list is empty
+
+        // transverse through each node until it reaches last node 
+        while (current.nextNode !== null) {
+            current = current.nextNode;
+        }
+        return current;
+    }
 }
