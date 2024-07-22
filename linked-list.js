@@ -22,4 +22,10 @@ export default class LinkedList {
             current.nextNode = newNode;
         }
     }
+
+    // add a new node containing value to the start of the list
+    prepend(value) {
+        const newNode = new Node(value, this.headNode); // nextNode = this.headNode
+        this.headNode = newNode;
+    }
 }

@@ -5,5 +5,8 @@ const list = new LinkedList();
 list.append('Tifa');
 console.log(list);
 
-list.append('Cloud');
+list.append('Barret');
+console.log(list);
+
+list.prepend('Cloud');
 console.log(list);
