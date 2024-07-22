@@ -28,4 +28,17 @@ export default class LinkedList {
         const newNode = new Node(value, this.headNode); // nextNode = this.headNode
         this.headNode = newNode;
     }
+
+    // return the total number of nodes in the list
+    size() {
+        let count = 0;
+        let current = this.headNode;
+
+        // transverse the list and increment the count until it reaches last node (null)
+        while (current !== null) {
+            count++;
+            current = current.nextNode;
+        }
+        return count;
+    }
 }
