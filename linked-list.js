@@ -75,4 +75,21 @@ export default class LinkedList {
         // else return the node
         return current !== null ? current : "There is no item at this index";
     }
+
+    // remove the last element from the list
+    pop() {
+        // check if list is empty or if list only contains one node
+        if (this.headNode === null) return;
+        if (this.headNode.nextNode === null) {
+            this.headNode = null;
+            return;
+        }
+
+        // transverse through each node until it reaches second to last node
+        let current = this.headNode;
+        while (current.nextNode.nextNode !== null) {
+            current = current.nextNode;
+        }
+        current.nextNode = null;
+    }
 }
