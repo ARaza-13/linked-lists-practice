@@ -24,5 +24,10 @@ console.log(list.size());
 console.log(list.head());
 console.log(list.tail());
 
+console.log(list.contains("Barret"));
 list.pop();
+console.log(list.contains("Barret"));
 console.log(list);
+
+console.log(list.contains("Cloud"));
+console.log(list.contains("Tifa"));
