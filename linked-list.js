@@ -135,4 +135,30 @@ export default class LinkedList {
         result += "null";
         return result;
     }
+
+    // insert node at specific position
+    insertAt(value, index) {
+        if (index < 0 || index > this.size()) {
+            throw new Error("Index is out of bounds.")
+        }
+
+        if (index === 0) {
+            this.prepend(value);
+            return;
+        }
+
+        const newNode = new Node(value);
+        let current = this.headNode;
+        let previous = null;
+        let currentIndex = 0;
+
+        while (currentIndex < index) {
+            previous = current;
+            current = current.nextNode;
+            currentIndex++
+        }
+
+        newNode.nextNode = current;
+        previous.nextNode = newNode;
+    }
 }

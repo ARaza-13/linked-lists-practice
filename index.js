@@ -27,6 +27,8 @@ console.log(list.tail());
 console.log(list.contains("Barret"));
 list.pop();
 console.log(list.contains("Barret"));
+
+list.insertAt("Sephiroth", 0);
 console.log(list.toString());
 
 console.log(list.contains("Cloud"));
